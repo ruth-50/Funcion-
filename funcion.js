@@ -1,6 +1,6 @@
 
 function  recorrer() {
-   let  arrays= [ ];  
+   let  arrays= [];  
     
     for (let i = 0; i < 10; i++) {
         arrays.push(i)   
@@ -9,22 +9,26 @@ function  recorrer() {
     return arrays
    
 }
-console.log(recorrer());  
+let s = recorrer()  
  
 
  
 
-function  sumar() {
+function  sumar(adicion) {
  let sum = (a , b)=> a + b
-return   recorrer().reduce(sum); 
+return  adicion.reduce(sum); 
     
 } 
 
-let s =  sumar()
+
 
 
 
 function name() {
-    console.log(sumar());
+    let primero = [20,30,40]
+    let segundo = sumar([37,90])
+    console.log(segundo);
+    console.log(sumar(primero));
+    console.log(sumar(s));
 }
 name()
