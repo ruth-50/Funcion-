@@ -1,24 +1,30 @@
-let arrays ;
-let a ;
+
 function  recorrer() {
-    arrays= [1,2,3,4,5,6];  
-    arrays.push(78,1)
-    for (let i = 0; i < arrays.length; i++) {
-        a = arrays[i]
-        
+   let  arrays= [ ];  
+    
+    for (let i = 0; i < 10; i++) {
+        arrays.push(i)   
+      
     }
+    return arrays
+   
 }
+console.log(recorrer());  
+ 
 
+ 
 
-function  sumar(acumulador , contador) {
-        return acumulador + contador
+function  sumar() {
+ let sum = (a , b)=> a + b
+return   recorrer().reduce(sum); 
+    
 } 
-recorrer()
-let b = arrays.reduce(sumar)
+
+let s =  sumar()
 
 
 
-function mostrar() {
-    console.log(b);
+function name() {
+    console.log(sumar());
 }
-mostrar() 
+name()
